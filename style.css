@@ -1,0 +1,75 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    text-align: center;
+    background: #eee;
+    transition: background-color 0.4s ease;
+    padding: 20px;
+}
+
+/* Header */
+header h1 {
+    font-size: 2rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+header h1:hover {
+    color: #666;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Palette complète */
+.palette {
+    width: 65%;
+    max-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 5px);
+    gap: 2px;
+    justify-content: center;
+}
+
+.color-cell {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.color-cell:hover {
+    transform: scale(1.25);
+    box-shadow: 0 0 8px rgba(0,0,0,0.35);
+}
+
+/* Image */
+.profile-img {
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+    .profile-img {
+        width: 230px;
+    }
+}
